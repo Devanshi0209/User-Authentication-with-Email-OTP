@@ -5,8 +5,7 @@ require('./models/user');
 const express=require('express');
 const mongoose=require('mongoose');
 const authrouter1=require('./routers/authrouter');
-const skillrouter1=require('./routers/skillrouter');
-const grouprouter1=require('./routers/grouprouter');
+
 const bodyparser=require('body-parser');
 const nodemailer=require('nodemailer');
 const path=require('path');
@@ -18,8 +17,7 @@ const mongouri='mongodb+srv://admin:passwordpassword@cluster0.3pox0.mongodb.net/
 const app=express();
 app.use(bodyparser.json());
 app.use(authrouter1);
-app.use(skillrouter1);
-app.use(grouprouter1);
+
 
 mongoose.connect(mongouri,{
 
